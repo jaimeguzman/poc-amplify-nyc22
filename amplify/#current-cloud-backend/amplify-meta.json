@@ -1,0 +1,90 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-retailstoreamplified-staging-182434-authRole",
+      "UnauthRoleArn": "arn:aws:iam::536364652750:role/amplify-retailstoreamplified-staging-182434-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::536364652750:role/amplify-retailstoreamplified-staging-182434-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-retailstoreamplified-staging-182434-deployment",
+      "UnauthRoleName": "amplify-retailstoreamplified-staging-182434-unauthRole",
+      "StackName": "amplify-retailstoreamplified-staging-182434",
+      "StackId": "arn:aws:cloudformation:us-west-2:536364652750:stack/amplify-retailstoreamplified-staging-182434/afb8d810-18d9-11ed-943c-0670b4a37a0b",
+      "AmplifyAppId": "d21tclgiumj71o"
+    }
+  },
+  "api": {
+    "RetailStoreAmplified": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            }
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ]
+        },
+        "GraphQLAPIIdOutput": "ycug75fbhre2javomi5kdyruq4",
+        "GraphQLAPIEndpointOutput": "https://2ofgtcjuz5cknhoi6pbbdcweci.appsync-api.us-west-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-fxlimadomrcwbkhr5wk7aplfzi"
+      },
+      "lastPushTimeStamp": "2022-08-10T20:56:24.432Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-retailstoreamplified-staging-182434-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiRetailStoreAmplified"
+      }
+    }
+  },
+  "auth": {
+    "RetailStoreAmplified": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-retailstoreamplified-staging-182434-deployment/amplify-cfn-templates/auth/RetailStoreAmplified-cloudformation-template.json",
+        "logicalId": "authRetailStoreAmplified"
+      },
+      "lastPushTimeStamp": "2022-08-10T20:56:24.498Z",
+      "output": {
+        "UserPoolId": "us-west-2_G1EwoNWKQ",
+        "AppClientIDWeb": "5m9dluq30scr4p6uavr93ug1ms",
+        "AppClientID": "36iudtlmigtil65kq84pcgjref",
+        "IdentityPoolId": "us-west-2:84c9db08-7b51-4ca8-97c8-fe58da5d17be",
+        "UserPoolArn": "arn:aws:cognito-idp:us-west-2:536364652750:userpool/us-west-2_G1EwoNWKQ",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "RetailStoreAmplified"
+      },
+      "lastPushDirHash": "4ZOk+2pmPf/E9/94YTU0Kwqc4MM="
+    }
+  }
+}
